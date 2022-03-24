@@ -10,5 +10,5 @@
 ## reference
 [viblo](https://viblo.asia/p/aws-practice-connect-vpc-network-between-aws-and-gcp-use-vpn-gDVK2rM0KLj)
 
-## setting GP of AWS & GCP
+## setting SG of AWS & GCP
 [securitygroup](https://viblo.asia/p/aws-practice-connect-vpc-network-between-aws-and-gcp-use-vpn-gDVK2rM0KLj#_enable-security-group-10)
