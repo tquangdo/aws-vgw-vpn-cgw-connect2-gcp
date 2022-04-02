@@ -34,7 +34,9 @@
     ![a1a2](screenshots/a1a2.png)
     ---
     ![a1a2_extra](screenshots/a1a2_extra.png)
-    - TH service ko phải là service có sẵn của AWS mà service chính là 1 app trên 1 VPC khác thì tạo (B) -> output (B) is service name, ex: `xxx.aws...servicename`
+    - TH service ko phải là service có sẵn của AWS mà service chính là 1 app trên 1 VPC khác thì tạo (B):
+    - 1. select LB type: `NW` or `GW`
+    - 2. output (B) is service name, ex: `xxx.aws...servicename`
     ![plink](screenshots/plink.png)
     1. #### NLB
     ![nlb](screenshots/nlb.png)
@@ -46,7 +48,7 @@
     - service name: select `com.amazonaws.<AZ!!!>.s3`
     - VPC: select `default VPC`
     - route table: select `rtb-private` (associated with `subnet-private`)
-    - policy: select Full Access/Cusotm
+    - policy: select Full Access/Custom
 1. ### check (A2)
     - will see `vpce-*`
     ![check_a2](screenshots/check_a2.png)
