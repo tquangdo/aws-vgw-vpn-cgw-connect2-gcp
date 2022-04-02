@@ -32,5 +32,23 @@
     - tạo (A) endpoint DNS name để kết nối với VPC chính -> output (A) is DNS names, ex: `vpce-*`
     - để tạo endpoint thì phải chọn service name: S3/DynamoDB (A2) hoặc các service khác (A1)
     ![a1a2](screenshots/a1a2.png)
+    ---
+    ![a1a2_extra](screenshots/a1a2_extra.png)
     - TH service ko phải là service có sẵn của AWS mà service chính là 1 app trên 1 VPC khác thì tạo (B) -> output (B) is service name, ex: `xxx.aws...servicename`
     ![plink](screenshots/plink.png)
+    1. #### NLB
+    ![nlb](screenshots/nlb.png)
+
+## (A2) connect FROM private subnet (in VPC) TO S3
+1. ### reference
+    [youtube](https://www.youtube.com/watch?v=ZdVYBNgsA5Q)
+1. ### create (A2)
+    - service name: select `com.amazonaws.<AZ!!!>.s3`
+    - VPC: select `default VPC`
+    - route table: select `rtb-private` (associated with `subnet-private`)
+    - policy: select Full Access/Cusotm
+1. ### check (A2)
+    - will see `vpce-*`
+    ![check_a2](screenshots/check_a2.png)
+    - ssh into private EC2 (in `subnet-private`) & `aws s3 ls` OK! 
+
