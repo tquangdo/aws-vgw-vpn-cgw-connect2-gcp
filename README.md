@@ -15,8 +15,8 @@
 ## more info
 ![vpc](screenshots/vpc.png)
 1. ### Client VPN Endpoint
-![vpn_ep](screenshots/vpn_ep.png)
-    different with VGW: connect to VPC FROM individual, NOT whole data center!
+    - different with VGW: connect to VPC FROM individual, NOT whole data center!
+    ![vpn_ep](screenshots/vpn_ep.png)
 1. ### transit GW
     - Transit Gateway như 1 cái trung tâm (hub), nhiều VPC thì thay vì VPC peering chồng chéo với nhau theo kiểu lưới (grid) thì nối về 1 hub - sẽ gọn hơn
     - các nối single này thì cũng cần dùng thêm (direct connect hoặc VPN) - trong hình đã được lược giản
@@ -24,7 +24,6 @@
     - 2. endpoint là on_premise:
     - 2-1. On_premises là data center cần heavy transfer  => Direct Connect => TransitGateway
     - 2-2. On_premise là branch office ko cần heavy transfer và bảo mật cao => Customer Gateway => IPSecVPC => [AWS Site-to-Site VPN] => TransitGateway
-    ---
     ![overview](screenshots/overview.png)
     - Ngoài ra khi scale lên thì có thể có nhiều TransitGateway ở các country khác nhau thì có thêm “peering connection” giữa các Transit Gateway
 1. ### private link
